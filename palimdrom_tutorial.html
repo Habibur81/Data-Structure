@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>String Problem</title>
+		<script>
+			let level = "abcyba";
+			
+			function Palindrom(str){
+				let start=0;
+				let end=str.length-1;
+				
+				while(end>start){
+					if(str[start] != str[end]){
+						return false;
+					}
+					
+					start++;
+					end--;
+				}
+				
+				return true;
+			}
+			
+			console.log(Palindrom(level));
+			
+		</script>
+	</head>
+	<body>
+		<h1>Problem1 solve</h1>
+	</body>
+</html>

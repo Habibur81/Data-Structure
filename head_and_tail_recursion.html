@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Head and Tail Recursion</title>
+    <script>
+        // function color()
+        // {
+        //     let data = 20;
+        //     console.log(data);
+        // }
+        // function day()
+        // {
+        //     color();
+        // }
+        // function fruit()
+        // {
+        //     day();
+        // }
+        // function topfunction()
+        // {
+        //     fruit()
+        // }
+        // topfunction();
+
+            function test(data)
+            {
+                //console.warn(data);
+                if(data>0)
+                {
+                    test(data-1);
+                }
+                console.log(data);
+            }
+
+            let data = 5;
+            test(data);
+
+    </script>
+</head>
+<body>
+    <h1>Head and Tail Recursion</h1>
+</body>
+</html>

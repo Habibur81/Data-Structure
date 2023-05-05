@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Queue</title>
+        <script>
+            let queue = [];
+            let currLen = queue.length;
+            let maxSize = 5;
+            
+
+            function enqueue() {
+                if (currLen < maxSize) {
+                    let element = document.getElementById("element").value;
+                    queue[currLen] = element;
+                    currLen++;
+                } else {
+                    alert("Queue is full");
+                }
+            }
+
+            function dequeue() {
+                if (currLen >= 0) {
+                    for (let i = 0; i < queue.length; i++) {
+                        queue[i] = queue[i + 1];
+                        queue.length = currLen--;
+                    }
+                    
+                }else{
+                    alert("Queue is Empty");
+                }
+
+            }
+
+            function display(){
+                for(var i=0; i < queue.length; i++){
+
+                    console.log(queue[i])
+                }
+            }
+
+            function font(){
+                if(currLen>0){
+                    console.log(queue[0]);
+                }else{
+                    console.log("Queue is Empty");
+                }
+            }
+
+            function rear(){
+                if(currLen>0){
+                    console.log(queue[currLen])
+                }else{
+                    console.log("Queue is Empty")
+                }
+            }
+
+        </script>
+    </head>
+
+    <body>
+        Input Queue Element:<input type="text" id="element">
+        <button onclick="enqueue()">Add Element</button>
+    </body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stack with input and button</title>
+        <script>
+            let data = [];
+            let currentLength = data.length;
+            let maxSize = 4;
+            
+            function push()
+            {
+
+                if(currentLength > maxSize)
+                {
+                    console.log("Stack is full")
+                }else{
+                    data[currentLength]=document.getElementById("data").value;
+                    currentLength +=1;
+                    
+                }
+                //console.log(`Element ${data} Inset in stack`);
+            }
+
+            function pop()
+            {
+                if(currentLength < 0)
+                {
+                    console.log("Stack is Empty")
+                }else{
+                    currentLength -= 1;
+                    data.length = currentLength;
+                    //console.log("Stack Element Pop")
+                }
+            }
+
+            function display()
+            {
+                for(let i=0; i <data.length; i++)
+                {
+                    console.log(data[i]);
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <input type="text" id="data" placeholder="Enter array element">
+        <button onclick="push()">Push Element</button>
+        <button onclick="pop()">Pop Element</button>
+        <button onclick="display()">show Stack Elemet</button>
+    </body>
+</html>

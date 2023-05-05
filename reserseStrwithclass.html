@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reserve String with class in Stack</title>
+    <script>
+        class Stack {
+
+            data = [];
+            currLen;
+            maxSize;
+
+            constructor(size) {
+                this.currLen = this.data.length;
+                this.maxSize = size;
+            }
+
+            push(value) {
+                if (this.data.length < this.maxSize) {
+                    this.data[this.currLen] = value;
+                    this.currLen += 1;
+                } else {
+                    alert("Stack is full");
+                }
+            }
+
+            pop() {
+                let laseIndex = this.data[this.currLen-1];
+                this.currLen -= 1;
+                this.data.length = this.currLen;
+                return laseIndex;
+            }
+
+            display(str) {
+
+                for (let i=0; i<str.length; i++) {
+                    this.push(str[i]);
+                }
+
+                
+            }
+
+            reverse()
+            {
+                for(let i=0; i<str.length; i++)
+                {
+                    console.log(this.pop());
+                }
+            }
+
+        }
+
+
+        let str = "Habib";
+
+        str = str.split("");
+        //console.log(str);
+
+        obj = new Stack(5);
+
+        obj.display(str);
+
+        console.log(obj.data);
+
+        obj.reverse();
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>String Problem</title>
+		<script>
+			function checkPalindrom(str){
+				
+				let ch1 = [];
+				let ch2 = [];
+				
+				for(let j=0; j<str.length; j++){
+					ch1.push(str[j]);
+				}
+				
+				for(let j=str.length-1; j>=0; j--){
+					ch2.push(str[j]);
+				}
+				
+				for(let i=0; i<ch1.length; i++){
+					if(ch1[i]==ch2[i]){
+						return true
+					}else{
+						return false;
+					}
+				}
+				
+				
+				
+				
+			}
+		
+			console.log(checkPalindrom("level"));
+			
+		</script>
+	</head>
+	<body>
+		<h1>Problem1 solve</h1>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Linked list</title>
+		<script>
+
+			class Listnode{
+				constructor(data){
+					this.data = data;
+					this.next = null;
+				}
+			}
+
+			class LinkedList{
+				constructor(head=null){
+					this.head = head;
+				}
+
+				traversing(data, value){
+					let traData;
+					traData=this.head;
+
+					while(traData){
+						//console.log(traData.data);
+
+						//console.log(traData);
+
+						if(traData.data == data){
+
+							traData.data=value
+							//return traData.data;	
+						}
+
+						console.log(traData);
+
+						traData=traData.next;
+
+						//console.log(traData);
+
+					}
+
+				}
+
+			}
+
+			let node1 = new Listnode(100);
+			let node2 = new Listnode(200);
+			let node3 = new Listnode(300);
+			let node4 = new Listnode(400);
+			let node5 = new Listnode(500);
+			node1.next = node2;
+			node2.next = node3;
+			node3.next = node4;
+			node4.next = node5;
+
+			let List = new LinkedList(node1);
+
+			
+			console.log(List.traversing(400, 200));
+			
+		</script>
+	</head>
+	<body>
+		<h1>Implememt of linked list</h1>
+	</body>
+</html>

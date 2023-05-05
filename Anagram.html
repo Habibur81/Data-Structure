@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>String Problem</title>
+		<script>
+			function checkAnagram(a, b){
+				
+				obj1 = {};
+				 
+				if(a.length != b.length){
+					return false;
+				}
+				
+				for(ch of a){
+					//console.log(ch);
+					obj1[ch] = (obj1[ch] || 0)+1;
+					
+					console.log(obj1[ch]);
+					
+				}
+				
+				console.log(obj1);
+				
+				for(st of b){
+					
+					if(!obj1[st]){
+						return false;
+					}
+					
+					obj1[st]--;
+					
+				}
+				
+				console.log(obj1);
+				
+				return true;
+				
+			}
+		
+			console.log(checkAnagram("hello", "hello"));
+			
+		</script>
+	</head>
+	<body>
+		<h1>Problem1 solve</h1>
+	</body>
+</html>

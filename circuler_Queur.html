@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Circuler Queue</title>
+		<script>
+			class Queue{
+				constructor(size){
+					this.maxSize = size;
+					this.items = new Array(size);
+					this.currentLen = 0;
+					this.front = -1;
+					this.rear = -1;
+				}
+				
+				enqueue(val){
+					if(this.currentLen != this.maxSize){
+					
+						if(this.rear == this.maxSize-1){
+							this.rear = 0;
+							
+						}else{
+							this.rear += 1;
+						}
+						
+						this.items[this.rear] = val;
+						this.currentLen +=1;
+						
+						if(this.front == -1){
+							this.front += 1 ;
+						}
+						
+					}
+					
+				}
+				
+				dequeue(){
+					if(this.currentLen != 0){
+						this.items[this.front] = null;
+						if(this.front == this.maxSize-1){
+							this.front = 0;
+							
+						}else{
+							this.front += 1;
+						}
+						
+						this.currentLen -= 1;
+						
+					}else{
+						this.front = -1;
+						this.rear = -1;
+						alert("Queue is empty!!!!!!!");
+					}
+					
+				}
+				
+				
+			}
+			
+			let queue = new Queue(5);
+		</script>
+	</head>
+	
+	<body>Habib want to big programmer, Please Allah help me. Please Please Please</body>
+	
+</html>

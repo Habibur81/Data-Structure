@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Array Traversing</title>
+        <script>
+            let data= [9, 12, 34, 43, 23, 67, 56, 32, 09];
+
+            function getElement(){
+                let el = document.getElementById("element").value;
+                
+                if(el < data.length && typeof parseInt(el)==="number"){
+                    alert(data[el]);
+                }{
+                    alert("Your element out of range");
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="text" id="element">
+        <button onclick="getElement()">Element</button>
+    </body>
+
+</html>

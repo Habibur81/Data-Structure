@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Recursive binary search</title>
+		<script>
+			let data = [10, 20, 30, 40, 80, 90,]
+			let start=0;
+			let end=data.length-1;
+			let find=40;
+			let position = undefined;
+			
+			function recurBinarySear(data, start, end){
+				mid = Math.floor((start+end)/2);
+				if(data[mid]==find){
+					position = mid;
+				}else if(data[mid]<find){
+					recurBinarySear(data, mid+1, end)
+				}else{
+					recurBinarySear(data, start, mid-1)
+				}
+				
+			}
+			
+			recurBinarySear(data, start, end);
+			console.log(position);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

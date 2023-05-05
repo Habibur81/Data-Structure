@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Recursion array reverse</title>
+    <script>
+        let data = [10, 30, 65, 80, 100];
+        let tem;
+        function reverse(data, start, end) {
+
+            console.log(data);
+            if (start <= end) {
+                tem = data[start];
+                data[start] = data[end];
+                data[end] = tem;
+                reverse(data, start+1, end-1);
+            }
+
+        }
+
+        reverse(data, 0, data.length - 1)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

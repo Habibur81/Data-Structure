@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liked list</title>
+        <script>
+            class list{
+
+                constructor(data){
+                    this.head = {
+                        value:data,
+                        next:null
+                    }
+                    this.tail = this.head;
+                    this.size = 1;
+                }
+
+                appendNode(nodeData){
+
+                    let newData = {
+                        value:nodeData,
+                        next:null,
+                    }
+
+                    this.tail.next = newData;
+                    this.tail = newData;
+                    this.size +=1;
+                }
+
+                traversing(){
+                    let count = 0;
+                    let currentNode = this.head;
+
+                    while(count<this.size){
+                        //console.log(currentNode);
+                        currentNode = currentNode.next;
+                        count++;
+                    }
+                }
+
+                deleteNode(index){
+                    let count=1;
+                    let leadNode = this.head;
+
+                    if(index==1){
+                        this.head = this.head.next;
+                    }else{
+                        while(count<index-1){
+                            leadNode = leadNode.next;
+                            count++;
+                        }
+                        let NewNode=leadNode.next.next;
+                        leadNode.next = NewNode;
+
+                      //  console.log(leadNode);
+                    }
+                    
+
+                    //console.log(leadNode);
+                }
+
+                insertNode(index, value){
+				
+                    let counter = 1;
+                    let currentNode = this.head;
+					
+                    while(counter<index){
+                        counter++;
+                        currentNode=currentNode.next;
+                    }
+
+                    let nextNode = currentNode.next;
+					
+                    currentNode.next = {
+                        value:value,
+                        next:nextNode
+                    }
+					
+                }
+
+
+            }
+
+            let list1 = new list(100);
+            list1.appendNode(200);
+            list1.appendNode(300);
+            list1.appendNode(400);
+            list1.appendNode(500);
+            list1.appendNode(600);
+            list1.appendNode(700);
+
+            list1.traversing();
+            list1.deleteNode(5);
+
+            list1.insertNode(3, 400000);
+
+            console.log(list1);
+
+
+        </script>
+    </head>
+
+    <body>
+        <h5>Implement linked list with class and object</h5>
+    </body>
+
+</html>

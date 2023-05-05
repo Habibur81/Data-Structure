@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Element Insert Array</title>
+        <script>
+            
+            function insertArrayElement(){
+                let data = [10,20,30,40];
+
+                let position =document.getElementById('position').value;
+                let el = document.getElementById('el').value;
+                el=parseInt(el);
+
+                for(let i=data.length-1; i>=0; i--)
+                {
+                    if(i >= position){
+
+                        data[i+1] = data[i];
+
+                        if(i==position){
+                            data[position]=el;
+                        }
+
+                    }
+                    
+                }
+
+                console.log(data);
+
+                // data[position]=el;
+            }
+            
+
+            
+        </script>
+    </head>
+    <body>
+        <input type="text" id="position" placeholder="array insert positon">
+        <input type="text" id="el" placeholder="element">
+        <button onclick="insertArrayElement()">Insert</button>
+    </body>
+</html>

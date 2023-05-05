@@ -1,0 +1,31 @@
+<html>
+
+	<head>
+		<title>Linear Algorithm</title>
+		<script>
+			        function searchElement(){
+ let data =[20,40,60,5,10,70,80,99];
+        let item=document.getElementById('searchEl').value;
+        let index=undefined;
+        for(i=0;i<=data.length-1;i++){
+            // console.warn(data[i])
+            if(data[i]===parseInt(item))
+            {
+                index=i;
+                break;
+            }
+        }
+        console.warn(index);
+        }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="enter value" id="searchEl">
+    <button onclick="searchElement()" >Search Element</button>
+
+  </body>
+
+	<body>
+	</body>
+
+</html>

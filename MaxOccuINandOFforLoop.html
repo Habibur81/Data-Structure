@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>String Problem</title>
+		<script>
+			function maxCharacter(str){
+			  const charMap = {};
+			  let max = 0, maxChar = "";
+
+			  for(let char of str){
+				//console.log(char);
+				
+				charMap[char] = charMap[char]+1 || 1;
+				
+				console.log(charMap[char]);
+			  }
+			  
+			  console.log(charMap);
+
+			  //for(let char in charMap){
+				//if(charMap[char] > max){
+				//  max = charMap[char];
+				//  maxChar = char;
+				//}
+			  //}
+			  //
+			  //return maxChar;
+			}
+			
+			maxCharacter("hello");
+			
+		</script>
+	</head>
+	<body>
+		<h1>Problem1 solve</h1>
+	</body>
+</html>

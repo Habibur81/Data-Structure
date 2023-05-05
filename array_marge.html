@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Two array marge</title>
+    <script>
+        let data = [10, 20, 3, 40];
+        let data2 = [60, 5, 70, 8];
+        let data3 = [];
+        let tem;
+
+        for(let i=0; i<data.length; i++)
+        {
+            data3[i] = data[i]
+        }
+        
+        for(let i=0; i<data2.length; i++)
+        {
+            data3[data.length+i] = data2[i]
+        }
+        
+        for(let i=0; i<data3.length; i++)
+        {
+            for(let j=i; j<data3.length; j++)
+            {
+                if(data3[i]>data3[j])
+                {
+                    tem = data3[i];
+                    data3[i]=data3[j];
+                    data3[j]=tem;
+                }
+            }
+        }
+
+        console.log(data3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

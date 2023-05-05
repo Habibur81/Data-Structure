@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stack with class</title>
+    <script>
+        class Stack {
+            data = [];
+            currLen;
+            maxSize;
+
+            constructor(maxSize) {
+                this.maxSize = maxSize;
+                //console.log(this.maxSize);
+                this.currLen = this.data.length;
+                // console.log(this.currLen);
+            }
+
+            push(ele) {
+                this.data[this.currLen] = ele;
+                this.currLen += 1;
+            }
+            pop() {
+                this.currLen -= 1;
+                this.data.length = this.currLen;
+            }
+            display() {
+
+                console.log(this.data)
+
+            }
+        }
+
+        obj = new Stack()
+        obj.push(10);
+        obj.display();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

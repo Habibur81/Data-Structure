@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>map</title>
+		<script>
+			let data = new Map([
+				['name', 'Habib'],
+				[true, 'bool key'],
+				[100, 'hundred'],
+			]);
+			
+			data.set('color', 'green');
+			
+			//console.warn(data);
+			//data.clear();
+			//console.warn(data.size);
+			//console.warn(data.has(100));
+			//console.warn(data.get(100));
+			
+			//for(let x of data){
+			//	console.log(x[0]);
+			//}
+			
+			//data.forEach((val, key) => {
+			//	console.warn(val)
+			//})
+			
+			data.delete('name');
+			data.delete(true);
+			
+			console.log(data);
+			
+		</script>
+	</head>
+	<body>
+		<h1>Map</h1>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stack</title>
+    <script>
+        let data = [];
+        let currentLength = data.length;
+        let stackMaxLength = 5;
+        
+
+        function push(value) {
+            if (currentLength < stackMaxLength) {
+                data[currentLength] = value;
+                currentLength++;
+            }else{
+                alert("Stack is full, don't add this value "+value);
+            }
+
+            //console.log(currentLength);
+        }
+
+        function pop()
+        {
+            if(currentLength > 0)
+            {
+               // console.log(data[currentLength-1]);
+                currentLength--;
+                data.length = currentLength;
+            }else{
+                alert("Stack is empty");
+            }
+            
+
+        }
+        push(10);
+        push(20);
+        push(50);
+        push(60);
+        push(70);
+        pop();
+        pop();
+        // pop();
+
+        console.log(data);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

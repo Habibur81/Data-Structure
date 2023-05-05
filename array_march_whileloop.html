@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array March with while loop</title>
+    <script>
+
+        let data1 = [1, 7, 10, 8, 3];
+        let data2 = [9, 4, 6,12];
+        let data3 = [];
+        let i=0, j=0, z=0;
+
+        while(i<data1.length && j<data2.length)
+        {
+            if(data1[i] < data2[j])
+            {
+                data3[z]=data1[i];
+                i++;
+            }else{
+                data3[z]=data2[j];
+                j++;
+            }
+            z++;
+        }
+
+        console.log(data3);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
