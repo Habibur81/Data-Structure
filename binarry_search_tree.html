@@ -101,20 +101,21 @@
 				}
 				
 				bsfTraversing(){
+
 					let queue = [];
 					queue.push(this.root);
-					let current = queue.shift();
-					
-					if(current.left){
-						queue.push(current.left);
+
+					while(queue.length){
+						let current = queue.shift();
+						if(current.left){
+							queue.push(current.left);
+						}
+						if(current.right){
+							queue.push(current.right);
+						}
+
+						console.log(current.value);
 					}
-					
-					if(current.right){
-						queue.push(current.right);
-					}
-					
-					console.log(current.value);
-					
 				}
 				
 			}
@@ -131,7 +132,7 @@
 			
 			//bst.preOrder(bst.root);
 			//bst.inOrder(bst.root);
-		//	bst.postOrder(bst.root);
+			//	bst.postOrder(bst.root);
 		
 			bst.bsfTraversing();
 			
