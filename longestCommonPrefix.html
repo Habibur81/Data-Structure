@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leetcode Problem</title>
+    <script>
+       // strs = ["dog","racecar","car"];
+        strs = ["flower","flow","flight"];
+
+        var longestCommonPrefix = function (strs) {
+
+            if(!strs.length){ return "";}
+
+            for(i=0; i<strs[0].length; i++)
+            {
+                for(j=1; j<strs.length; j++){
+                    if(strs[0][i]!==strs[j][i]){
+                        return strs[0].slice(0, i);
+                    }
+                }
+            }
+
+            return strs[0];
+
+        };
+
+      console.log(longestCommonPrefix(strs));
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Longest common prefix</h1>
+</body>
+
+</html>
