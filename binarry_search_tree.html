@@ -117,6 +117,24 @@
 						console.log(current.value);
 					}
 				}
+
+				minValue(root){
+					if(!root.left){
+						return root.value;
+					}else{
+						return this.minValue(root.left);
+					}
+
+				}
+
+				maxValue(root){
+					if(!root.right){
+						return root.value;
+					}else{
+						return this.maxValue(root.right);
+					}
+
+				}
 				
 			}
 			
@@ -134,7 +152,9 @@
 			//bst.inOrder(bst.root);
 			//	bst.postOrder(bst.root);
 		
-			bst.bsfTraversing();
+			//bst.bsfTraversing();
+			console.log(bst.minValue(bst.root));
+			console.log(bst.maxValue(bst.root));
 			
 			//console.log(bst.searchNode(bst.root, 19));
 
