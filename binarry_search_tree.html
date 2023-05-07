@@ -135,6 +135,15 @@
 					}
 
 				}
+
+				removeData(value){
+					this.root = this.deleteNode(this.root, value);
+				}
+				deleteNode(root, value){
+					if(root===null){
+						return null;
+					}
+				}
 				
 			}
 			
@@ -150,17 +159,17 @@
 			
 			//bst.preOrder(bst.root);
 			//bst.inOrder(bst.root);
-			//	bst.postOrder(bst.root);
+			//bst.postOrder(bst.root);
 		
 			//bst.bsfTraversing();
-			console.log(bst.minValue(bst.root));
-			console.log(bst.maxValue(bst.root));
+			//console.log(bst.minValue(bst.root));
+			//console.log(bst.maxValue(bst.root));
 			
 			//console.log(bst.searchNode(bst.root, 19));
-
-			//	console.log(bst);
-			
+			//console.log(bst);
 			//console.log(bst.isTreeEmpty());
+
+			bst.removeData(5);
 			
         </script>
     </head>
