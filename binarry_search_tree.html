@@ -139,10 +139,29 @@
 				removeData(value){
 					this.root = this.deleteNode(this.root, value);
 				}
+
 				deleteNode(root, value){
 					if(root===null){
 						return null;
 					}
+					if(value<root.value){
+						root.left=this.deleteNode(root.left, value);
+					}else if(value>root.value){
+						root.right=this.deleteNode(root.right, value);
+					}else{
+						if(!root.right && !root.left){
+							return null;
+						}else if(!root.left){
+							return root.right;
+						}else if(!root.right){
+							return root.left;
+						}
+
+						root.value=this.minValue(root.right);
+						root.right=this.deleteNode(root.right, root.value); 
+					}
+
+					return root;
 				}
 				
 			}
@@ -161,7 +180,7 @@
 			//bst.inOrder(bst.root);
 			//bst.postOrder(bst.root);
 		
-			//bst.bsfTraversing();
+			
 			//console.log(bst.minValue(bst.root));
 			//console.log(bst.maxValue(bst.root));
 			
@@ -169,7 +188,11 @@
 			//console.log(bst);
 			//console.log(bst.isTreeEmpty());
 
-			bst.removeData(5);
+			//bst.bsfTraversing();
+			bst.removeData(20);
+			console.log(bst.root);
+
+			//bst.bsfTraversing();
 			
         </script>
     </head>
