@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+    <script>
+        class Graph {
+            constructor(){
+                this.data={};
+            }
+            adjList(vertex){
+                if(!this.data[vertex]){
+                    this.data[vertex]=[]
+                }
+            }
+        }
+
+        const Gp1=new Graph();
+              Gp1.adjList("A");
+              Gp1.adjList("B");
+              Gp1.adjList("C");
+              Gp1.adjList("D");
+
+            console.log(Gp1.data);
+
+
+    </script>
+</head>
+<body>
+    <h1>Learn about Graph with adjacency list</h1>
+</body>
+</html>
