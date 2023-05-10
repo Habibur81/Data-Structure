@@ -11,9 +11,10 @@
                 margin: 0px auto;
             }
             .playground{
+                border: 1px solid black;
                 margin: 0px auto;
                 position: relative;
-                background-color: white;
+                background-color:white;
                 height: 600px;
                 width: 600px;
                 float: left;
@@ -25,8 +26,21 @@
                 cursor: pointer;
                 overflow: hidden;
             }
-            .button{
-                cursor:pointer;
+            .but{
+                cursor: pointer;
+                color: blue;
+                padding: 5px;
+                font-size: 16px;
+                border-radius: 12px;
+                width: 100px;
+                background-color: aquamarine;
+                
+            }
+            button:hover{
+                background-color: coral;
+                width: 120px;
+                opacity: 0.6;
+                transition: 0.5s;
             }
         </style>
     </head>
@@ -47,7 +61,9 @@
                     <span>Total touch: </span>
                     <span id="totalHit"></span>
                 </h3>
-                <button class="button" onclick="gameStart()">Start</button>
+                <div>
+                    <button class="but" onclick="gameStart()">Start</button>
+                </div>
             </div>
         </div>
         
@@ -66,7 +82,7 @@
                     let j=Math.floor(Math.random()*500)+1;
                     mosquito.style.left=i+"px";
                     mosquito.style.top=j+"px";
-                },300)
+                },1000)
                 setTimeout(()=>{
                     clearTimeout(time);
                     document.getElementById('gameStatus').innerHTML="Game Time Over";
