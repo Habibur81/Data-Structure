@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mosquito Game</title>
+        <style>
+            .game{
+                width: 960px;
+                margin: 0px auto;
+            }
+            .playground{
+                margin: 0px auto;
+                position: relative;
+                background-color: white;
+                height: 600px;
+                width: 600px;
+                float: left;
+            }
+            .mosquito{
+                position: relative;
+                height: 40px;
+                width: 40px;
+                cursor: pointer;
+                overflow: hidden;
+            }
+            .button{
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="game">
+            <div class="playground">
+                <img 
+                    class="mosquito"
+                    id="mosquito"
+                    onclick="hitmosquito()"
+                    src="mosquito-isolated-white-background_293060-13942.jpg" 
+                    alt="Mosquito Picture"
+                >
+            </div>
+            <div class="controls">
+                <h3 id="gameStatus"></h3>
+                <h3>
+                    <span>Total touch: </span>
+                    <span id="totalHit"></span>
+                </h3>
+                <button class="button" onclick="gameStart()">Start</button>
+            </div>
+        </div>
+        
+
+        <script>
+            let hitCount=0;
+            let gameIsStart=false;
+
+            function gameStart(){
+                gameIsStart=true;
+                document.getElementById('gameStatus').innerHTML="Game Start";
+                hitCount=0;
+                let mosquito=document.getElementById('mosquito');
+                let time=setInterval(()=>{
+                    let i=Math.floor(Math.random()*500)+1;
+                    let j=Math.floor(Math.random()*500)+1;
+                    mosquito.style.left=i+"px";
+                    mosquito.style.top=j+"px";
+                },300)
+                setTimeout(()=>{
+                    clearTimeout(time);
+                    document.getElementById('gameStatus').innerHTML="Game Time Over";
+                    gameIsStart=false;
+                },10000)
+            }
+
+            function hitmosquito(){
+                if(gameIsStart){
+                    hitCount+=1;
+                    document.getElementById('totalHit').innerText=hitCount;
+                }
+            }
+            
+        </script>
+
+    </body>
+</html>
