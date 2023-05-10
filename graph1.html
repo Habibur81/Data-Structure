@@ -15,6 +15,17 @@
                     this.data[vertex]=[]
                 }
             }
+            addEdge(v1, v2){
+                if(!this.data[v1]){
+                    this.adjList(v1);
+                }
+                if(!this.data[v2]){
+                    this.adjList(v2);
+                }
+
+                this.data[v1].push(v2);
+                this.data[v2].push(v1);
+            }
         }
 
         const Gp1=new Graph();
@@ -22,8 +33,15 @@
               Gp1.adjList("B");
               Gp1.adjList("C");
               Gp1.adjList("D");
+              Gp1.addEdge('A', 'B');
+              Gp1.addEdge('A', 'C');
+              Gp1.addEdge('B', 'C');
+              Gp1.addEdge('B', 'D');
 
-            console.log(Gp1.data);
+            console.log("A vertex connected with "+Gp1.data['A']);
+            console.log("B vertex connected with "+Gp1.data['B']);
+            console.log("C vertex connected with "+Gp1.data['C']);
+            console.log("D vertex connected with "+Gp1.data['D']);
 
 
     </script>
