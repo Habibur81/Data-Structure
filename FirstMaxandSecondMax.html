@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <script>
+        let fmax=0;
+        let smax;
+        let data=[30,10,60,45];
+
+        for(i=0; i<data.length; i++){
+            if(data[i]>fmax){
+                smax=fmax;
+                fmax=data[i];
+            }else if(data[i]>smax){
+                smax=data[i];
+            }
+        }
+
+        console.log("Array first max value:"+fmax+'\n', "Array second max value:"+smax);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
