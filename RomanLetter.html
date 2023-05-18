@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function romanToInt(s) {
+            const obj = { 
+                I:1,
+                V:5,
+                X:10,
+                L:50,
+                C:100,
+                D:500,
+                M:1000
+            }
+            sum=0;
+            fnum=0;
+            snum=0;
+            
+            for(let i=0; i<s.length; i++){
+                fnum=obj[s[i]];
+                if(i!=s.length-1){
+                    snum=obj[s[i+1]];
+                    if(snum>fnum){
+                        fnum=snum-fnum;
+                        i=i+1;
+                    }
+                }
+                sum = sum+fnum;
+            }
+
+            return sum;
+
+        };
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

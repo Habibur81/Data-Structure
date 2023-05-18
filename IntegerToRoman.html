@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const ones = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+        const tens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
+        const hrns = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
+        const ths = ["", "M", "MM", "MMM"];
+
+        function intToRoman(num){
+          return ths[Math.floor(num/1000)]+hrns[Math.floor((num%1000)/100)]+tens[Math.floor((num%100)/10)]+ones[num%10];
+        }
+
+       console.log(intToRoman(3));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
