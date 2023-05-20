@@ -593,5 +593,237 @@
     // console.log(sayAge.call(person, 25));
     // console.log(sayAge.bind(person, 25));
     // console.log(sayAge.bind(person, 25)());
-    //call function directly call function but bind function don't directly call function. 
+    //call function directly call function but bind function don't directly call function. bind add two proper not call.The bind has to be called manually
+</script>
+<script>
+    //75
+    // function sayHi(){
+    //     return (() => 0) ();
+    // }
+    // console.log(typeof sayHi());
+    //type of number
+</script>
+<script>
+    //76
+    // function sayHi(){
+    //     return ()=>0;
+    // }
+    // console.log(typeof sayHi());
+    //Output is function because the arrow function is not call.
+</script>
+<script>
+    //77
+    // console.log(typeof typeof 1);
+    //Output is string because string er modhe 1 likha hoyeche tai type of string hobe.
+</script>
+<script>
+    //78
+    // const nums=[1,2,3];
+    // nums[6]=11;
+    // console.log(nums);
+    //Output is 1,2,3,empty,empty,empty,11 je index gulote value nei sekhane empty dekhabe.
+</script>
+<script>
+    //79
+    // const nums=[1,2,3];
+    // nums[9]=nums;
+    // console.log(nums);
+    //Output is 1,2,3,6*empty 9 position array then contineous coltei thakbe. infinite projont.
+</script>
+<script>
+    //80
+    //Everything is javascript is either a..........
+    //A:Primitive and Object
+    //B:Function or object 
+    //C:Trick Question! Only Objects
+    //D:Number Or Object
+    //Output A
+</script>
+<script>
+    //81
+    // console.log(!!null);//Output False
+    // console.log(!!'');//Output False
+    // console.log(!!1);//Output True
+
+</script>
+<script>
+    //82
+    // console.log(setInterval(()=>console.log('Hi'), 1000))
+    // console.log(setInterval(()=>console.log('Hi'), 1000))
+    // console.log(setInterval(()=>console.log('Hi'), 1000))
+    //setInterval() Unique id dei and unique id er madhome setInterval off korte hoy.
+
+</script>
+<script>
+    //83
+   // console.log([..."Habib"]); //[] er vetor ... use korle string vuloke array baniye dei.
+    //Output ['H', 'a', 'b', 'i', 'b'] 
+</script>
+<script>
+    //84
+    // const firstPromise = new Promise((res, raj) =>{
+    //     setTimeout(res, 500, 'one');
+    // })
+    // const secondPromise = new Promise((res, raj) =>{
+    //     setTimeout(res, 100, 'two');
+    // })
+    // Promise.race([firstPromise, secondPromise])
+    // .then(res => console.log(res));
+    //Output is two because firstPromise more tiem then secondPromise
+</script>
+<script>
+    //85
+    // let person = {name:'Habib'}
+    // const members = [person];
+    // person=null;
+    // console.log(members);
+    //Person null hobe na karon person is a object when it makes array they are memory location different tai object er person null hobe na 
+</script>
+<script>
+    //86
+    // const person ={
+    //     name:"Habib",
+    //     age:25
+    // }
+    // for(const item in person){
+    //     console.log(item);
+    // }
+    //Output is name and age
+</script>
+<script>
+    //87
+    // let data=3+4+'5';
+    // console.log(data);
+    // console.log(typeof data);
+    //Output is string
+</script>
+<script>
+    //88
+   // console.log(typeof 3 + 4 + '5');
+    //Output Number45 here first check typeof 3 that means type of number then 4+'5'=45 string overall number+45=number45
+</script>
+<script>
+    //89
+    // console.log(typeof (+'a'));
+    // console.log(typeof (+'5'));
+    // console.log(typeof (3+4+ +'5'));
+    //Output number. because string er age + dile type number hoye jai 
+</script>
+<script>
+    //90
+   // console.log([]==[]);
+    //Output is false because two array memory location different.
+</script>
+<script>
+    //91
+    // let data=[1,2,3].map(num=>{
+    //     if(typeof num=="number") return;
+    //     return num *2;
+    // })
+    //Output is [undefine, undefine, undefine] because here is num type is number so return undefine.
+</script>
+<script>
+    //92
+    // function getInfo(member){
+    //     member.name="Habib";
+    // }
+    // const person = {name:'Habibur'};
+    // getInfo(person);
+    // console.log(person['name']);
+    //Output is {name:'Habib'}
+</script>
+<script>
+    //93
+    // function car(){
+    //     this.make='taka';
+    //     return {make:'Kia'}
+    // }
+    // const myCar = new car();
+    // console.log(myCar.make);
+</script>
+<script>
+    //94
+    // (() => {
+    //     let x = (y=10);
+    // })();
+
+    // console.log(typeof x);
+    //Output is undefined because   x scope holo function er modher jehetu function bahire kono x define kora nai tai. Output is undefined.
+</script>
+<script>
+    //95
+    // (() => {
+    //     let x=y=10;
+    // })();
+    // console.log(typeof y);
+    //here y type is not define so y is global variable is javaScript so we can access y any position
+    //Output is number.
+
+</script>
+<script>
+    //96
+    // (()=>{
+    //     let x=10;
+    // })();
+
+    // (()=>{
+    //     let x=10;
+    // })();
+    // console.log(x);
+    //Output is undefine; here are two function is different so there is no problem.
+</script>
+<script>
+    //97
+    // (()=>{
+    //     let x=y=10;
+    // })();
+    // (()=>{
+    //     let x=y=20;
+    // })();
+    // console.log(y);
+    //Output is 20 because global variable is catch last assign value;
+</script>
+<script>
+    //98
+    // let x=100;
+
+    // (()=>{
+    //    var x=20;
+    // })();
+
+    // console.log(x);
+    //Output is 100;
+</script>
+<script>
+    //99
+    //console.log(!true - true);
+    //Output is -1 because true means 1 so !true is means 0 -true means -1 so 0-1 Equal to -1.
+</script>
+<script>
+    //100
+    // console.log(true + +'10');
+    //Output is 11 because true mean 1 and +'10' mean 10 so 1+10 equal to 11
+</script>
+
+<!-- Interview question -->
+<script>
+    //Q1 //How to convert string to array. There are many way to convert string to array.
+    let str="Hello, How are you?";
+    // console.log(str.split()); //Full string convert into array one element
+    // console.log([str]); //Full string convert into array one element
+    // console.log(str.split(''));//Every letter are array elememt within space.
+    // console.log([...str]);//Every letter are array elememt within space.
+    // console.log(str.split(' '));//Every word are array elememt without space.
+    // console.log(str.split('a'));//array element devided from a letter.
+    // console.log(str.split('H'));//array element devided from a letter.
+    //Convert str in only 1 array
+    //Convert string to array with each character
+    //Convert string to array with space or any sequence
+
+
+    //Replace any character
+    // console.log(str.replace('H', '_'));//Only one H character is replace by _.
+    // console.log(str.replace(/H/g, '_'));//Every H character is replace by _. 
+
+
 </script>
