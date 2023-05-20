@@ -1,3 +1,4 @@
+<h2>Interview Question</h2>
 <script>
     //1
     // let a=[];
@@ -475,4 +476,122 @@
     // let b=new Number(3);
     // console.log(a==b);//true
     // console.log(a===b);//false
+</script>
+<script>
+    //61
+    // let name;
+    // nmae={};
+    // console.log(name);
+    // console.log(nmae);
+    //Output undefine and object
+
+</script>
+<script>
+    //62
+    // function fruit(){
+    //     console.log("Woof!");
+    // }
+    // fruit.name="Habib";
+    //Output is Woof!
+</script>
+<script>
+    //63
+    // function sum(a, b){
+    //     return a+b;
+    // }
+    // console.log(sum(1, "2"));
+    //Output is 12 because "2" is a string;
+</script>
+<script>
+    //64
+    // let num=0;
+    // console.log(num++);//Output 0
+    // console.log(++num);//Output 2
+    // console.log(num);//Output 2
+
+</script>
+<script>
+    //65
+    // function getAge(...ages){
+    //     //console.log(ages);
+    //    // console.log(typeof ages);
+    // }
+    // getAge(25);
+    //Javascript no support array so typeof is object
+</script>
+<script>
+    //66
+    // function getAge(){
+    //     'use strict'
+    //     age=25;
+    //     console.log(age);
+    // }
+    // getAge()
+    //use strict use korle variable declor korte hoy. use strict use na korle variable declor korar projon nei var hisahe declor hoy.
+</script>
+<script>
+    //67
+    // const sum=eval('10*10+5');
+    // console.log(sum);
+    //eval method use korle string er modhe number thakle o number er mot kaj kore.
+</script>
+<script>
+    //68
+    // **how long cool_secret accesssiable
+    // const a = sessionStorage.getItem('cool_secret', 123);
+    // different between localStorage and sessionStorage
+    // sessionStorage tag closs korle clear hoye jai but localStorage manually clear kore nite hoy.
+</script>
+<script>
+    //69
+    // const obj={1:"a", 2:"b", 3:"c"}
+    // console.log(obj.hasOwnProperty("1"));
+    // console.log(obj.hasOwnProperty(1));
+    // console.log(obj[3]);
+    //Output true string and number proper kaj korbe object er jon so return korbe true.
+</script>
+<script>
+    //70
+    // const obj={a:"one", b:"two", a:"repeat"}
+    // console.log(obj);
+    //output {a:"repeat", b:"two"} //here a position is 1 but value is last
+</script>
+<script>
+    //71
+    // for(let i=1; i<5; i++){
+    //     if(i===3) continue;
+    //     console.log(i);
+    // }
+    //Output 1,2,4 because when i===3 the continue condition is true so after code is not execute.
+</script>
+<script>
+    //72
+    // const foo=()=>console.log('First');
+    // const bar=()=>setTimeout(()=>console.log('Second'));
+    // const baz=()=>console.log('Third');
+    // bar();
+    // baz();
+    // foo();
+    //Output come depend on call function
+    //Here Output is third, First and Second because setTimeout() method value set stack algorithm so it is last come;
+</script>
+<div>
+    <!-- 73 -->
+    <!-- <div onclick="console.log('First')">
+        <div onclick="console.log('Second')">
+            <button onclick="console.log('Third')">Click me!</button>
+        </div>
+    </div> -->
+    <!-- Output Thirst Second and Third -->
+</div>
+<script>
+    //74
+    // const person={name:"Habib"}
+    // function sayAge(age){
+    //     return `${this.name} is ${age}`;
+    // }
+    // console.log(sayAge.call(person, 25));
+    // console.log(sayAge.bind(person, 25));
+    // console.log(sayAge.bind(person, 25)());
+    //call function directly call function but bind function don't directly call function. 
 </script>
