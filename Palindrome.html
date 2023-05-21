@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palimdrome</title>
+    <script>
+        function Palimdrome(str){
+            const regex = /[^a-z0-9]/g;
+           // console.log(regex);
+            const clearStr = str.toLowerCase().replace(regex, " ");
+           // console.log(clearStr);
+            const reverseStr = clearStr.split("").reverse().join("");
+            //console.log(reverseStr);
+            const isPalindrome= clearStr===reverseStr;
+            return isPalindrome;
+        }
+        console.log(Palimdrome("My age is 0, 0 si ega ym"));
+    </script>
+</head>
+<body>
+    <h1>Palindrome Problem Solve</h1>
+</body>
+</html>
