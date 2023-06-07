@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let l1 = [9,9,9,9,9,9,9];
+        let l2 = [9,9,9,9];
+
+        let num1 = '', num2 = ''
+
+        while (l1) {
+            num1 = l1.val + num1
+            l1 = l1.next
+        }
+
+
+
+        while (l2) {
+            num2 = l2.val + num2
+            l2 = l2.next
+        }
+
+        console.log(num1);
+
+        console.log(num2);
+
+        const sum = (Number(num1) + Number(num2)).toString();
+
+        let list = null
+        let i = 0
+        while (i < sum.length) {
+            list = new ListNode(sum[i], list)
+            i++
+        }
+
+        console.log(list);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
