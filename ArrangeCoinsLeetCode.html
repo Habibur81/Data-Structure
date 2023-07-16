@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //Best case
+        var arrangeCoins = function(n) {
+                let result=0;
+
+                while(result<=n){
+                    n -= result;
+                    result++;
+                }
+                
+                return result-1
+            };
+
+        arrangeCoins(5)
+
+        //Worst case
+        var arrangeCoins = function(n) {
+                let i=n, findNum;
+
+                while(i>0){
+                    findNum = i*(i+1)/2;
+
+                    if(findNum<=n){
+                        return i;
+                    }
+                    
+                    i--;
+                }
+
+            };
+
+        arrangeCoins(5)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -27,10 +27,13 @@
 
         console.log(num2);
 
-        const sum = (Number(num1) + Number(num2)).toString();
+        const sum = (Number(num1) + Number(num2));
+
+        console.log(sum);
 
         let list = null
         let i = 0
+
         while (i < sum.length) {
             list = new ListNode(sum[i], list)
             i++
