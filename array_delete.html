@@ -6,10 +6,12 @@
             function deleteFunction(){
 
                 let data = [1, 2, 5, 7, 8];
-                window.alert(data);
+                //window.alert(data);
 
                 let position = document.getElementById('position').value;
+
                 position = parseInt(position);
+                
                 for(let i=position; i<data.length-1; i++)
                 {
                     data[i] = data[i+1];
